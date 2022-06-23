@@ -1,0 +1,6 @@
+body {
+  background-image: url-for("static', filename='images/surya.png");
+}
+.myownclass{
+background-color: red;
+}

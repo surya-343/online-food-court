@@ -1,0 +1,37 @@
+{% extends "mytemplate.html" %}
+{% block bodycontent%}
+
+<style>
+
+ h1 {
+   text-align: center;
+    }
+
+    {
+   background-color: red;
+    }
+
+ h1 {
+  text-shadow: 2px 2px 5px red;
+    }
+ nav{
+  background-color: #666;
+  padding: 20px;
+  text-align: right;
+  font-size: 30px;
+  color: red;
+}
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+</style>
+<h1>Welcome to Online Food Court</h1>
+<img src="{{ url_for('static', filename='images/surya.png') }}" width="1500" height="490">
+
+<footer>
+  <p>Copyright @ 2022 Online Food Court</p>
+</footer>
+{% endblock %}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to MyWebSite.com</title>
+</head>
+<body>
+
+<h1>TextLogo</h1>
+
+<hr> <!--Put Line-->
+
+<nav>
+    <a href="/">Home</a>|
+    <a href="/about">About</a>|
+    <a href="/login">Login</a>|
+</nav>
+
+<hr> <!--Put Line-->
+
+<!--1 way to display-->
+<h1>Database Report - 1</h1>
+<hr>
+{{my_data}}
+<hr>
+
+<!--2nd way to display-->
+<h1>Database Report - 2</h1>
+<hr>
+<table border="1">
+    {% for i, j, k, l in my_data : %}
+    <tr>
+        <td>{{i}}</td>
+        <td>{{j}}</td>
+        <td>{{k}}</td>
+        <td>{{l}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<hr>
+
+<!--3rd way to display-->
+<!--table color: green-->
+<!--row with No Image color: yellow-->
+<!--cell with No Image color: red-->
+<h1>Database Report - 3</h1>
+<hr>
+<table border="1" bgcolor="green">
+    {% for i, j, k, l in my_data : %}
+    {% if k == 'No Image' : %}
+    <tr bgcolor="yellow">
+        <td>{{i}}</td>
+        <td>{{j}}</td>
+        <td bgcolor="red">{{k}}</td>
+        <td>{{l}}</td>
+    </tr>
+    {% else : %}
+    <tr>
+        <td>{{i}}</td>
+        <td>{{j}}</td>
+        <td>{{k}}</td>
+        <td>{{l}}</td>
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+</table>
+<hr>
+
+
+</body>
+</html>

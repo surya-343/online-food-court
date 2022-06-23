@@ -1,0 +1,96 @@
+{% extends "mytemplate.html" %}
+{% block bodycontent%}
+<style>
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+thead td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+</style>
+
+<div class="food-details">
+            <h1>Food Details</h1>
+        </div>
+
+<table class="content-table">
+    <thead>
+    <tr>
+        <th> <font color="Red"> Resto Name </font></th>
+        <th> <font color="Red"> Food Request ID </font></th>
+        <th> <font color="Red"> Resto Location </font></th>
+        <th> <font color="Red"> Food Name </font></th>
+        <th> <font color="Red"> Preperation Cost </font></th>
+        <th> <font color="Red"> Selling Price </font></th>
+        <th> <font color="Red"> Description </font></th>
+        <th> <font color="Red"> Buy Order </font></th>
+    </tr>
+    {% for each_record in my_data : %}
+    <tr>
+        <td><font color="FFFFFF"> {{each_record[0]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[1]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[2]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[3]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[4]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[5]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[6]}} </font></td>
+        <td><a href="/myorder/{{each_record[1]}}>click here to order"></a></td>
+    </tr>
+    {% endfor %}
+    </thead>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+Copyright @ 2022 Online Food Court
+</footer>
+
+{% endblock %}

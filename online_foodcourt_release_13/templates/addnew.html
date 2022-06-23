@@ -1,0 +1,89 @@
+{% extends "mytemplate.html" %}
+{% block bodycontent%}
+
+<style>
+h1 {
+text-align: center
+   }
+
+form {
+  text-align: lift;
+}
+nav {
+
+  text-align: right;
+}
+  nav{
+  background-color: #666;
+  padding: 20px;
+  text-align: right;
+  font-size: 30px;
+  color: red;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+input[type=text],select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #777;
+  padding: 20px;
+}
+
+</style>
+
+<h1>Foodmin</h1>
+<div class="container">
+<form action="/register" method="post">
+
+  <label for="restoename">Resto name:</label><br>
+  <input type="resto" name="uname" required/>
+  <br>
+
+  <label for="restoloaction">Resto location:</label><br>
+  <input type="location" name="text" required>
+  <br>
+
+  <label for="fooditemname">Food Name:</label><br>
+  <input type="item" name="item" required>
+  <br>
+
+  <label for="preperationcost">Preperation cost:</label><br>
+  <input type="cost" name="precost" required>
+  <br>
+
+  <label for="sellingprice">Selling price:</label><br>
+  <input type="price" name="sele price" required>
+  <br>
+
+  <label for="description">Description:</label><br>
+  <input type="text" name="text" placeholder="Write something.." style="height:180px" required>
+  <br>
+
+
+    <input type="submit">
+</form>
+</div>
+<footer>
+  <p>Copyright @ 2022 Online Food Court</p>
+</footer>
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ h1 {
+   text-align: center;
+    }
+
+ h1 {
+  text-shadow: 2px 2px 5px red;
+    }
+
+  p {
+   text-align: lift;
+    }
+ p  {
+  color: black;
+  font-family: verdana;
+  font-size: 160%;
+   }
+ nav{
+  background-color: #666;
+  padding: 20px;
+  text-align: right;
+  font-size: 30px;
+  color: red;
+}
+footer {
+  background-color: #777;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+    <meta charset="UTF-8">
+    <title>Welcome to Online Food Court</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</style>
+</head>
+<body>
+<hr> <!--Put Line-->
+
+<nav>
+    <a href="/">Home</a>|
+    <a href="/about">About</a>|
+    <a href="/login">Login</a>|
+</nav>
+
+<hr> <!--Put Line-->
+<h1>Welcome to Online Food Court</h1>
+<div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Vaddara Suresh</h2>
+        <p class="title">Dept Of MCA</p>
+        <p>Siddaganga Institute Of Technology</p>
+        <p>vaddarasuresh@gmail.com</p>
+        <p>9964753631</p>
+      </div>
+    </div>
+  </div>
+<img src="{{ url_for('static', filename='images/surya.png') }}" width="1500" height="490">
+<footer>
+Copyright @ 2022 Online Food Court
+</footer>
+</body>
+</html>

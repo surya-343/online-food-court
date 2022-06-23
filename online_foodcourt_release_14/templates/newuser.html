@@ -1,0 +1,81 @@
+{% extends "mytemplate.html" %}
+{% block bodycontent%}
+
+
+<style>
+form {
+  text-align: lift;
+}
+
+ .topnav {
+  overflow: hidden;
+  background-color: #777;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+</style>
+   
+   <form action="/">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Register here</h2>
+        </div>
+      
+
+  <label for="fname">User name:</label><br>
+  <input type="text" name="uname" required/>
+  <br>
+
+  <label for="lname">Password:</label><br>
+  <input type="password" name="pw1" required>
+  <br>
+
+  <label for="fname">Re Enter Password:</label><br>
+  <input type="password" name="pw2" required>
+  <br>
+
+  <label for="lname">Email:</label><br>
+  <input type="email" name="email" required>
+  <br>
+
+    
+    <input type="submit" value="Click Here To Register">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+  <p>Copyright @ 2022 Online Food Court</p>
+</footer>
+{% endblock %}

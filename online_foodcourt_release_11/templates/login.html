@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ h1 {
+   text-align: center;
+    }
+
+    {
+   background-color: red;
+    }
+
+ h1 {
+  text-shadow: 2px 2px 5px red;
+    }
+ nav{
+  background-color: #666;
+  padding: 20px;
+  text-align: right;
+  font-size: 30px;
+  color: red;
+}
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+    <meta charset="UTF-8">
+    <title>Welcome to Online Food Court</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</style>
+</head>
+<body>
+<style>
+h3{
+  text-align: lift;
+}
+
+form {
+  text-align: lift;
+}
+</style>
+
+<hr> <!--Put Line-->
+
+<nav>
+    <a href="/">Home</a>|
+    <a href="/about">About</a>|
+    <a href="/login">Login</a>|
+    <a href="/newuser"> Register </a>|
+</nav>
+
+<hr> <!--Put Line-->
+
+<h3>Login Here</h1>
+
+<form action="/validate" method="post">
+
+  <label for="name">User name:</label><br>
+  <input type="text" name="uname" required/><br>
+
+  <label for="name">Password:</label><br>
+  <input type="password" name="pw" required><br>
+
+  <input type="submit" value="Click Here To Login">
+
+</form>
+
+<h1>Welcome to Online Food Court</h1>
+<img src="{{ url_for('static', filename='images/surya.png') }}" width="1500" height="390">
+<footer>
+  <p>Copyright @ 2022 Online Food Court</p>
+</footer>
+
+</body>
+</html>
